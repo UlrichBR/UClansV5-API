@@ -5,9 +5,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
+import me.ulrich.clans.api.LibAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
-import me.ulrich.clans.api.LibAPIManager;
 
 public interface UClans {
 
@@ -22,7 +22,7 @@ public interface UClans {
 	HooksAPIManager getHooksAPI();
 	
 	BossBarAPIManager getBossBarAPI();
-	
+
 	LibAPIManager getLibAPI();
 
 }
