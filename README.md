@@ -1,4 +1,5 @@
 # UClansV5-API
+[![](https://jitpack.io/v/UlrichBR/UClansV5-API.svg)](https://jitpack.io/#UlrichBR/UClansV5-API)
 
 Maven:
 
