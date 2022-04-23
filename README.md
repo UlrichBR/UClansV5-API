@@ -1,7 +1,9 @@
 # UClansV5-API
 
 Maven:
-	<repositories>
+
+<code>
+		<repositories>
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
@@ -13,3 +15,4 @@ Maven:
 	    <artifactId>UClansV5-API</artifactId>
 	    <version>Tag</version>
 	</dependency>
+	</code>
