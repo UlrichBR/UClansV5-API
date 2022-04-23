@@ -37,7 +37,12 @@ public final class Clans extends JavaPlugin implements UClans{
 	public ClanAPIManager getClanAPI() {
 		return null;
 	}
-
+	
+	@Override
+	public LibAPIManager getLibAPI() {
+		return null;
+	}
+	
 	@Override
 	public PlayerAPIManager getPlayerAPI() {
 		// TODO Auto-generated method stub
