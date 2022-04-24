@@ -3,7 +3,7 @@ package me.ulrich.clans.api;
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
-import me.ulrich.clans.packets.interfaces.HooksAPI;
+import me.ulrich.clans.interfaces.HooksAPI;
 
 public class HooksAPIManager implements HooksAPI {
 
