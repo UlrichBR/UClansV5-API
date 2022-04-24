@@ -13,5 +13,5 @@ Maven:
 &lt;dependency&gt;
     &lt;groupId&gt;com.github.UlrichBR&lt;/groupId&gt;
     &lt;artifactId&gt;UClansV5-API&lt;/artifactId&gt;
-    &lt;version&gt;Tag&lt;/version&gt;
+    &lt;version&gt;VERSION&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
