@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.GuiData;
-import me.ulrich.clans.packets.interfaces.GuiAPI;
+import me.ulrich.clans.interfaces.GuiAPI;
 
 public class GuiAPIManager implements GuiAPI {
 
