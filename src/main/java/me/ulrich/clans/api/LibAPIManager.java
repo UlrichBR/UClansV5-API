@@ -1,6 +1,7 @@
 package me.ulrich.clans.api;
 
 import org.bukkit.Location;
+import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.LibAPI;
@@ -63,6 +64,31 @@ public class LibAPIManager implements LibAPI {
 	
 	public Clans getPlugin() {
 		return plugin;
+	}
+
+	@Override
+	public ItemStack removeNbtString(ItemStack itemStack, String key) {
+		return null;
+	}
+
+	@Override
+	public ItemStack setNbt(ItemStack itemStack, String key, Object value) {
+		return null;
+	}
+
+	@Override
+	public boolean hasNbt(ItemStack currentItem, String name, String nbts) {
+		return false;
+	}
+
+	@Override
+	public String getNbtString(ItemStack currentItem, String name) {
+		return null;
+	}
+
+	@Override
+	public int getNbtInteger(ItemStack currentItem, String name) {
+		return 0;
 	}
 
 }
