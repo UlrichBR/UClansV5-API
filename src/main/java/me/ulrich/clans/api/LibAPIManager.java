@@ -4,7 +4,7 @@ import me.ulrich.clans.Clans;
 
 import me.ulrich.clans.library.hologram.HoloManager;
 import me.ulrich.clans.manager.SignManager;
-import me.ulrich.clans.packets.interfaces.LibAPI;
+import me.ulrich.clans.interfaces.LibAPI;
 
 public class LibAPIManager implements LibAPI {
 
