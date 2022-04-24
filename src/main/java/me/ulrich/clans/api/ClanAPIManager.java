@@ -17,7 +17,7 @@ import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 import me.ulrich.clans.data.CommandData;
 import me.ulrich.clans.data.CommandData_show;
 import me.ulrich.clans.data.HomesData;
-import me.ulrich.clans.packets.interfaces.ClanAPI;
+import me.ulrich.clans.interfaces.ClanAPI;
 
 public class ClanAPIManager implements ClanAPI {
 	
