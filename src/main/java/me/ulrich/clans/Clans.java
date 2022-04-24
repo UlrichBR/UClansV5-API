@@ -11,7 +11,7 @@ import me.ulrich.clans.api.LibAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.data.Addon;
-import me.ulrich.clans.packets.interfaces.UClans;
+import me.ulrich.clans.interfaces.UClans;
 
 public final class Clans extends JavaPlugin implements UClans{
 
