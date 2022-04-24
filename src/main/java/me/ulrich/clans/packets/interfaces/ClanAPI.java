@@ -134,6 +134,8 @@ public interface ClanAPI {
 	List<ClanData> getRivalries(UUID clanUUID);
 
 	List<ClanData> getAlliances(UUID clanUUID);
+	
+	void registerCommand(String alias, ClansCommand command);
 
 	
 
