@@ -57,11 +57,11 @@ public class ClanAPIManager implements ClanAPI {
 	public void updateClanData(ClanData clan) {}
 
 	@Override
-	public void registerCommand(String alias, ClansCommand command) {}
+	public void unRegisterCommand(String command) {}
 	
 	@Override
-	public void unRegisterCommand(String command) {}
-
+	public void registerCommand(String alias, ClansCommand command) {}
+	
 	@Override
 	public void insertCommand(String command, String permission, String alias, int cooldown,
 			CommandData_show data) {}
