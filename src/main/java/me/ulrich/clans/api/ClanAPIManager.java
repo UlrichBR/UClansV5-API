@@ -56,6 +56,9 @@ public class ClanAPIManager implements ClanAPI {
 	public void updateClanData(ClanData clan) {}
 
 	@Override
+	public void registerCommand(String alias, ClansCommand command) {}
+	
+	@Override
 	public void unRegisterCommand(String command) {}
 
 	@Override
