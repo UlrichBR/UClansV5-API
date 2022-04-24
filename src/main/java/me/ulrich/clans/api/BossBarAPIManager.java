@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanEnum.BarActions;
-import me.ulrich.clans.packets.interfaces.BossBarAPI;
+import me.ulrich.clans.interfaces.BossBarAPI;
 
 public class BossBarAPIManager implements BossBarAPI {
 
