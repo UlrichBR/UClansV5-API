@@ -1,7 +1,10 @@
 package me.ulrich.clans.api;
 
+import org.bukkit.Location;
+
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.LibAPI;
+import me.ulrich.clans.library.hologram.HoloData;
 import me.ulrich.clans.library.hologram.HoloManager;
 import me.ulrich.clans.manager.SignManager;
 
@@ -31,6 +34,26 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public HoloManager getHoloManager() {
 		return null;
+	}
+	
+	@Override
+	public boolean createHolo(String id, Location loc, String[] lines, Object type) {
+		return false;
+	}
+	
+	@Override
+	public boolean hasHolo(String id) {
+		return false;
+	}
+	
+	@Override
+	public HoloData getHolo(String id) {
+		return null;
+	}
+	
+	@Override
+	public boolean deleteHolo(String id) {
+		return false;
 	}
 	
 	@Override
