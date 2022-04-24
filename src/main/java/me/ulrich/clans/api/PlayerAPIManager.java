@@ -11,7 +11,7 @@ import me.ulrich.clans.data.Invites;
 import me.ulrich.clans.data.PlayerData;
 import me.ulrich.clans.data.ClanEnum.InviteResponse;
 import me.ulrich.clans.data.ClanEnum.MemberRoles;
-import me.ulrich.clans.packets.interfaces.PlayerAPI;
+import me.ulrich.clans.interfaces.PlayerAPI;
 
 public class PlayerAPIManager implements PlayerAPI {
 
