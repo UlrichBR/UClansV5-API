@@ -17,6 +17,7 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	//addon usage
 	private HashMap<Addon, Boolean> addonEnabledList = new HashMap<Addon, Boolean>();
+	private boolean multiServer = false;
 	
 	private final ClanAPIManager ClanAPI;
 	private final PlayerAPIManager PlayerAPI;
@@ -74,5 +75,8 @@ public final class Clans extends JavaPlugin implements UClans{
 		return addonEnabledList;
 	}
 
+	public boolean isMultiServer() {
+		return multiServer;
+	}
 
 }
