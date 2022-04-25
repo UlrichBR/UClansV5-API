@@ -1,6 +1,7 @@
 package me.ulrich.clans.api;
 
 import org.bukkit.Location;
+import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
@@ -19,76 +20,77 @@ public class LibAPIManager implements LibAPI {
 	
 	@Override
 	public boolean isSign() {
-		return false;
+		return this.plugin.getLibManager().isSign();
 	}
 
 	@Override
 	public SignManager getSignManager() {
-		return null;
+		return this.plugin.getLibManager().getSignManager();
 	}
 	
 	@Override
 	public boolean isHolo() {
-		return false;
+		return this.plugin.getLibManager().isHolo();
 	}
 
 	@Override
 	public HoloManager getHoloManager() {
-		return null;
+		return this.plugin.getLibManager().getHoloManager();
 	}
 	
 	@Override
 	public boolean createHolo(String id, Location loc, String[] lines, Object type) {
-		return false;
+		return this.plugin.getLibManager().createHolo(id, loc, lines, type);
 	}
 	
 	@Override
 	public boolean hasHolo(String id) {
-		return false;
+		return this.plugin.getLibManager().hasHolo(id);
 	}
 	
 	@Override
 	public HoloData getHolo(String id) {
-		return null;
+		return this.plugin.getLibManager().getHolo(id);
 	}
 	
 	@Override
 	public boolean deleteHolo(String id) {
-		return false;
+		return this.plugin.getLibManager().deleteHolo(id);
 	}
 	
 	@Override
+	public ItemStack removeNbtString(ItemStack itemStack,final String key) {
+		return this.plugin.getLibManager().removeNbtString(itemStack, key);
+    }
+	@Override
+	public ItemStack setNbt(ItemStack itemStack, final String key, final Object value) {
+		return this.plugin.getLibManager().setNbt(itemStack, key, value);
+    }
+	@Override
+	public boolean hasNbt(final ItemStack currentItem, final String name, final String nbts) {
+		return this.plugin.getLibManager().hasNbt(currentItem, name, nbts);
+    }
+	@Override
+	public String getNbtString(final ItemStack currentItem, final String name) {
+		return this.plugin.getLibManager().getNbtString(currentItem, name);
+    }
+	@Override
+	public int getNbtInteger(final ItemStack currentItem, final String name) {
+		return this.plugin.getLibManager().getNbtInteger(currentItem, name);
+    }
+	
+	@Override
 	public String parseColor(String text) {
-		return null;
+		return this.plugin.getLibManager().parseColor(text);
+	}
+	
+	@Override
+	public SimpleCommandMap getSimpleCommandMap(Clans plugin) {
+		return this.plugin.getLibManager().getSimpleCommandMap(plugin);
 	}
 	
 	public Clans getPlugin() {
 		return plugin;
-	}
-
-	@Override
-	public ItemStack removeNbtString(ItemStack itemStack, String key) {
-		return null;
-	}
-
-	@Override
-	public ItemStack setNbt(ItemStack itemStack, String key, Object value) {
-		return null;
-	}
-
-	@Override
-	public boolean hasNbt(ItemStack currentItem, String name, String nbts) {
-		return false;
-	}
-
-	@Override
-	public String getNbtString(ItemStack currentItem, String name) {
-		return null;
-	}
-
-	@Override
-	public int getNbtInteger(ItemStack currentItem, String name) {
-		return 0;
 	}
 
 }
