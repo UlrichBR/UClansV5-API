@@ -1,8 +1,10 @@
 package me.ulrich.clans.interfaces;
 
 import org.bukkit.Location;
+import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.inventory.ItemStack;
 
+import me.ulrich.clans.Clans;
 import me.ulrich.clans.library.hologram.HoloData;
 import me.ulrich.clans.library.hologram.HoloManager;
 import me.ulrich.clans.manager.SignManager;
@@ -36,5 +38,7 @@ public interface LibAPI {
 	String getNbtString(ItemStack currentItem, String name);
 
 	int getNbtInteger(ItemStack currentItem, String name);
+
+	SimpleCommandMap getSimpleCommandMap(Clans plugin);
 
 }
