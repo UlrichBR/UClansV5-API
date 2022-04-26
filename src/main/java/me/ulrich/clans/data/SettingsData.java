@@ -6,12 +6,16 @@ public class SettingsData {
 	private boolean allySharedChat;
 	private boolean joinLeave;
 	private boolean allySharedHome;
+	private boolean memberManagerWars;
+	private boolean memberManagerHomes;
 
-	public SettingsData(boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome) {
+	public SettingsData(boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean memberManagerWars, boolean memberManagerHomes) {
 		this.setWarInvite(warInvite);
 		this.setAllySharedChat(allySharedChat);
 		this.setJoinLeave(joinLeave);
 		this.setAllySharedHome(allySharedHome);
+		this.setMemberManagerWars(memberManagerWars);
+		this.setMemberManagerHomes(memberManagerHomes);
 	}
 
 	public boolean isWarInvite() {
@@ -44,5 +48,21 @@ public class SettingsData {
 
 	public void setAllySharedHome(boolean allySharedHome) {
 		this.allySharedHome = allySharedHome;
+	}
+
+	public boolean isMemberManagerWars() {
+		return memberManagerWars;
+	}
+
+	public void setMemberManagerWars(boolean memberManagerWars) {
+		this.memberManagerWars = memberManagerWars;
+	}
+
+	public boolean isMemberManagerHomes() {
+		return memberManagerHomes;
+	}
+
+	public void setMemberManagerHomes(boolean memberManagerHomes) {
+		this.memberManagerHomes = memberManagerHomes;
 	}
 }
