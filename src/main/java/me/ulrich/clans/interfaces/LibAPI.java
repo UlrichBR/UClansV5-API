@@ -1,13 +1,18 @@
 package me.ulrich.clans.interfaces;
 
+import java.util.List;
+
 import org.bukkit.Location;
 import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
-import me.ulrich.clans.library.hologram.HoloData;
-import me.ulrich.clans.library.hologram.HoloManager;
+
 import me.ulrich.clans.manager.SignManager;
+
+import me.ulrich.npc.EntityData;
+import me.ulrich.npc.EntityManager;
+import me.ulrich.npc.data.EntityLine;
 
 public interface LibAPI {
 
@@ -15,19 +20,19 @@ public interface LibAPI {
 
 	SignManager getSignManager();
 
-	boolean isHolo();
+	boolean isEntity();
 
-	HoloManager getHoloManager();
-
+	EntityManager getEntityManager();
+	
 	String parseColor(String text);
 
-	boolean createHolo(String id, Location loc, String[] lines, Object type);
+	boolean createEntity(String id, Location loc, List<EntityLine> lines, Object type);
 
-	boolean hasHolo(String id);
+	boolean hasEntity(String id);
 
-	boolean deleteHolo(String id);
+	boolean deleteEntity(String id);
 
-	HoloData getHolo(String id);
+	EntityData getEntity(String id);
 
 	ItemStack removeNbtString(ItemStack itemStack, String key);
 
@@ -40,5 +45,9 @@ public interface LibAPI {
 	int getNbtInteger(ItemStack currentItem, String name);
 
 	SimpleCommandMap getSimpleCommandMap(Clans plugin);
+
+	
+
+	
 
 }
