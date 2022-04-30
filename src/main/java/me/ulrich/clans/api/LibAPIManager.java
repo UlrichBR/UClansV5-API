@@ -1,14 +1,17 @@
 package me.ulrich.clans.api;
 
+import java.util.List;
+
 import org.bukkit.Location;
 import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.LibAPI;
-import me.ulrich.clans.library.hologram.HoloData;
-import me.ulrich.clans.library.hologram.HoloManager;
 import me.ulrich.clans.manager.SignManager;
+import me.ulrich.npc.EntityData;
+import me.ulrich.npc.EntityManager;
+import me.ulrich.npc.data.EntityLine;
 
 public class LibAPIManager implements LibAPI {
 
@@ -29,72 +32,68 @@ public class LibAPIManager implements LibAPI {
 	}
 	
 	@Override
-	public boolean isHolo() {
+	public boolean isEntity() {
 		return false;
 	}
 
 	@Override
-	public HoloManager getHoloManager() {
+	public EntityManager getEntityManager() {
 		return null;
 	}
 	
 	@Override
-	public boolean createHolo(String id, Location loc, String[] lines, Object type) {
+	public boolean createEntity(String id, Location loc, List<EntityLine> lines, Object type) {
 		return false;
 	}
 	
 	@Override
-	public boolean hasHolo(String id) {
+	public boolean hasEntity(String id) {
 		return false;
 	}
 	
 	@Override
-	public HoloData getHolo(String id) {
+	public EntityData getEntity(String id) {
 		return null;
 	}
 	
 	@Override
-	public boolean deleteHolo(String id) {
+	public boolean deleteEntity(String id) {
 		return false;
 	}
+	
+	@Override
+	public ItemStack removeNbtString(ItemStack itemStack,final String key) {
+		return null;
+    }
+	@Override
+	public ItemStack setNbt(ItemStack itemStack, final String key, final Object value) {
+		return null;
+    }
+	@Override
+	public boolean hasNbt(final ItemStack currentItem, final String name, final String nbts) {
+		return false;
+    }
+	@Override
+	public String getNbtString(final ItemStack currentItem, final String name) {
+		return null;
+    }
+	@Override
+	public int getNbtInteger(final ItemStack currentItem, final String name) {
+		return 0;
+    }
 	
 	@Override
 	public String parseColor(String text) {
 		return null;
 	}
 	
-	public Clans getPlugin() {
-		return plugin;
-	}
-
-	@Override
-	public ItemStack removeNbtString(ItemStack itemStack, String key) {
-		return null;
-	}
-
-	@Override
-	public ItemStack setNbt(ItemStack itemStack, String key, Object value) {
-		return null;
-	}
-
-	@Override
-	public boolean hasNbt(ItemStack currentItem, String name, String nbts) {
-		return false;
-	}
-
-	@Override
-	public String getNbtString(ItemStack currentItem, String name) {
-		return null;
-	}
-
-	@Override
-	public int getNbtInteger(ItemStack currentItem, String name) {
-		return 0;
-	}
-	
 	@Override
 	public SimpleCommandMap getSimpleCommandMap(Clans plugin) {
 		return null;
+	}
+	
+	public Clans getPlugin() {
+		return plugin;
 	}
 
 }
