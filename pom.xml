@@ -62,6 +62,11 @@
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
+		<!-- holographicdisplays, VAULT -->
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -70,6 +75,12 @@
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
 			<version>1.18.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.UlrichBR</groupId>
+			<artifactId>EntityNPC</artifactId>
+			<version>1.1</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
