@@ -1,6 +1,7 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarFlag;
@@ -16,6 +17,6 @@ public interface BossBarAPI {
 
 	void startBossBar(Player player, BarActions action, List<String> data);
 
-	void removeAllBar(String uuid);
+	void removeAllBar(UUID uuid);
 
 }
