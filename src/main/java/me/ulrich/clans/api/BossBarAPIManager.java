@@ -1,6 +1,7 @@
 package me.ulrich.clans.api;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarFlag;
@@ -20,8 +21,17 @@ public class BossBarAPIManager implements BossBarAPI {
 	}
 	
 	@Override
-	public void customBossBar(Player player, BarColor barcolor, BarStyle barstyle, List<BarFlag> flags, String message, int seconds, boolean animated, List<String> data) {}
+	public void customBossBar(Player player, BarColor barcolor, BarStyle barstyle, List<BarFlag> flags, String message, int seconds, boolean animated, List<String> data) {
+		this.plugin.getBossBarManager().customBossBar(player, barcolor, barstyle, flags, message, seconds, animated, data);
+	}
 
 	@Override
-	public void startBossBar(Player player, BarActions action, List<String> data) {}
+	public void startBossBar(Player player, BarActions action, List<String> data) {
+		this.plugin.getBossBarManager().startBossBar(player, action, data);
+	}
+	
+	@Override
+	public void removeAllBar(UUID uuid) {
+		this.plugin.getBossBarManager().removeAllBar(uuid);
+	}
 }
