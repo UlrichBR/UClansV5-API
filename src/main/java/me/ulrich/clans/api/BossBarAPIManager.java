@@ -21,17 +21,11 @@ public class BossBarAPIManager implements BossBarAPI {
 	}
 	
 	@Override
-	public void customBossBar(Player player, BarColor barcolor, BarStyle barstyle, List<BarFlag> flags, String message, int seconds, boolean animated, List<String> data) {
-		this.plugin.getBossBarManager().customBossBar(player, barcolor, barstyle, flags, message, seconds, animated, data);
-	}
+	public void customBossBar(Player player, BarColor barcolor, BarStyle barstyle, List<BarFlag> flags, String message, int seconds, boolean animated, List<String> data) {}
 
 	@Override
-	public void startBossBar(Player player, BarActions action, List<String> data) {
-		this.plugin.getBossBarManager().startBossBar(player, action, data);
-	}
-	
+	public void startBossBar(Player player, BarActions action, List<String> data) {}
+
 	@Override
-	public void removeAllBar(UUID uuid) {
-		this.plugin.getBossBarManager().removeAllBar(uuid);
-	}
+	public void removeAllBar(UUID uuid) {}
 }
