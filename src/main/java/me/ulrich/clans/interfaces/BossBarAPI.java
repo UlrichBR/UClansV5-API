@@ -16,4 +16,6 @@ public interface BossBarAPI {
 
 	void startBossBar(Player player, BarActions action, List<String> data);
 
+	void removeAllBar(String uuid);
+
 }
