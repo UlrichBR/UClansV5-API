@@ -1,5 +1,7 @@
 package me.ulrich.clans.api;
 
+import java.util.UUID;
+
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
@@ -56,6 +58,11 @@ public class HooksAPIManager implements HooksAPI {
 
 	@Override
 	public WorldGuardManager getWorldguardManager() {
+		return null;
+	}
+
+	@Override
+	public String parsePapi(UUID player, String text) {
 		return null;
 	}
 
