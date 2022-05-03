@@ -2,6 +2,7 @@ package me.ulrich.clans.interfaces;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.ulrich.clans.api.AddonAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
@@ -22,7 +23,11 @@ public interface UClans {
 	HooksAPIManager getHooksAPI();
 	
 	BossBarAPIManager getBossBarAPI();
-
+	
+	AddonAPIManager getAddonAPI();
+	
 	LibAPIManager getLibAPI();
+	
+	
 
 }
