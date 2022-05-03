@@ -1,5 +1,7 @@
 package me.ulrich.clans.interfaces;
 
+import java.util.UUID;
+
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.packets.WorldGuard.WorldGuardManager;
@@ -19,9 +21,13 @@ public interface HooksAPI {
 	String getPlayerName(Player player);
 
 	String parsePapi(Player player, String text);
-
+	
+	String parsePapi(UUID player, String text);
+	
 	boolean isWorldguard();
 
 	WorldGuardManager getWorldguardManager();
+
+	
 	
 }
