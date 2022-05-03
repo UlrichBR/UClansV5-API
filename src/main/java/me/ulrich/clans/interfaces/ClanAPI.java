@@ -7,8 +7,10 @@ import java.util.UUID;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.data.ClanData;
+import me.ulrich.clans.data.ClanEnum.AllyInviteReturn;
 import me.ulrich.clans.data.ClanEnum.ClanActions;
 import me.ulrich.clans.data.ClanEnum.PlaceholderTop;
 import me.ulrich.clans.data.ClanEnum.RivalAllyCount;
@@ -24,6 +26,8 @@ public interface ClanAPI {
 	HashMap<String, CommandData> getUClanCommander();
 
 	void reloadClanData(UUID uuid);
+	
+	void loadAllClanData();
 
 	void updateClanData(ClanData clan);
 
@@ -95,9 +99,15 @@ public interface ClanAPI {
 
 	boolean addPoint(UUID clanid, int amount, CommandSender sender);
 
+	boolean addPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
+	
 	boolean removePoint(String tag, int amount, CommandSender sender);
+	
+	boolean removePoint(String tag, int amount, CommandSender sender, StringBuilder reason);
 
 	boolean setPoint(String tag, int amount, CommandSender sender);
+	
+	boolean setPoint(String tag, int amount, CommandSender sender, StringBuilder reason);
 
 	int getPointsNextLevel(ClanData clanData);
 
@@ -119,8 +129,8 @@ public interface ClanAPI {
 
 	boolean isGlobalFF();
 	
-	List<String> getProxieds();
-
+	void setProxieds(String json);
+	
 	RivalRemoveReturn rivalRemoveSend(UUID clanUUID1, UUID clanUUID2, boolean mult);
 
 	void clanChatSendOffline(UUID sender, String message);
@@ -135,7 +145,17 @@ public interface ClanAPI {
 
 	List<ClanData> getAlliances(UUID clanUUID);
 
+	AllyInviteReturn allySend(UUID clanUUID1, UUID clanUUID2, boolean mult);
+
 	void registerCommand(String alias, ClansCommand command);
+
+	boolean deleteBanner(UUID clanid, Player player);
+
+	boolean setBanner(UUID clanid, Player player, ItemStack itemstack);
+
+	
+
+	
 
 	
 
