@@ -7,9 +7,11 @@ import java.util.UUID;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanData;
+import me.ulrich.clans.data.ClanEnum.AllyInviteReturn;
 import me.ulrich.clans.data.ClanEnum.ClanActions;
 import me.ulrich.clans.data.ClanEnum.PlaceholderTop;
 import me.ulrich.clans.data.ClanEnum.RivalAllyCount;
@@ -42,11 +44,6 @@ public class ClanAPIManager implements ClanAPI {
 
 	@Override
 	public HashMap<String, CommandData> getUClanCommander() {
-		return null;
-	}
-
-	@Override
-	public List<String> getProxieds() {
 		return null;
 	}
 	
@@ -306,6 +303,54 @@ public class ClanAPIManager implements ClanAPI {
 	@Override
 	public List<ClanData> getAlliances(UUID clanUUID) {
 		return null;
+	}
+
+	@Override
+	public void loadAllClanData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean addPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removePoint(String tag, int amount, CommandSender sender, StringBuilder reason) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean setPoint(String tag, int amount, CommandSender sender, StringBuilder reason) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void setProxieds(String json) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public AllyInviteReturn allySend(UUID clanUUID1, UUID clanUUID2, boolean mult) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteBanner(UUID clanid, Player player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean setBanner(UUID clanid, Player player, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 
