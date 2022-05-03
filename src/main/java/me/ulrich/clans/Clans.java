@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.ulrich.clans.api.AddonAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
@@ -25,6 +26,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final HooksAPIManager HooksAPI;
 	private final BossBarAPIManager BossBarAPI;
 	private final LibAPIManager libAPI;
+	private final AddonAPIManager AddonAPI;
 	
 	public Clans() {
 		this.ClanAPI = new ClanAPIManager(this);
@@ -33,7 +35,8 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.HooksAPI = new HooksAPIManager(this);
 		this.BossBarAPI = new BossBarAPIManager(this);
 		this.libAPI = new LibAPIManager(this);
-	}
+		this.AddonAPI = new AddonAPIManager(this);
+		}
 	
 	@Override
 	public JavaPlugin getPlugin() {
@@ -71,6 +74,11 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 	
+	@Override
+	public AddonAPIManager getAddonAPI() {
+		return null;
+	}
+	
 	public HashMap<Addon, Boolean> getAddonEnabledList() {
 		return addonEnabledList;
 	}
@@ -78,5 +86,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	public boolean isMultiServer() {
 		return multiServer;
 	}
+
+
 
 }
