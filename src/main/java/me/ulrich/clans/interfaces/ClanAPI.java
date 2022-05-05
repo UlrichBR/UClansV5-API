@@ -50,6 +50,8 @@ public interface ClanAPI {
 	boolean changeLeader(UUID clanUUID, UUID newleader);
 
 	boolean leaveClan(UUID player);
+	
+	boolean leaveClan(Player player);
 
 	boolean modDesc(ClanData clanData, String newDescription, Player sender);
 
@@ -129,6 +131,8 @@ public interface ClanAPI {
 
 	boolean isGlobalFF();
 	
+	String getProxieds();
+
 	void setProxieds(String json);
 	
 	RivalRemoveReturn rivalRemoveSend(UUID clanUUID1, UUID clanUUID2, boolean mult);
@@ -152,6 +156,10 @@ public interface ClanAPI {
 	boolean deleteBanner(UUID clanid, Player player);
 
 	boolean setBanner(UUID clanid, Player player, ItemStack itemstack);
+
+	double getClanKDR(UUID clanUUID);
+
+	
 
 	
 
