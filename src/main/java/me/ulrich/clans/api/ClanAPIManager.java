@@ -31,278 +31,21 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
-	public void check_actions(ClanActions action, UUID clanid) {}
-	@Override
-	public UUID getClanByTag(String tag) {
-		return null;
-	}
-	
-	@Override
 	public HashMap<String, CommandData> getClanCommander() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public HashMap<String, CommandData> getUClanCommander() {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	@Override
-	public void reloadClanData(UUID uuid) {}
 
 	@Override
-	public void updateClanData(ClanData clan) {}
-
-	@Override
-	public void unRegisterCommand(String command) {}
-	
-	@Override
-	public void registerCommand(String alias, ClansCommand command) {}
-	
-	@Override
-	public void insertCommand(String command, String permission, String alias, int cooldown,
-			CommandData_show data) {}
-
-	@Override
-	public boolean tagExists(String tag) {
-		return false;
-	}
-
-	@Override
-	public boolean isRival(UUID player1, UUID player2) {
-		return false;
-	}
-
-	@Override
-	public boolean isAlly(UUID player1, UUID player2) {
-		return false;
-	}
-
-	@Override
-	public boolean promotePlayer(UUID clanUUID, UUID promoted) {
+	public void reloadClanData(UUID uuid) {
+		// TODO Auto-generated method stub
 		
-		return false;
-	}
-	
-	@Override
-	public RivalRemoveReturn rivalRemoveSend(UUID clanUUID1, UUID clanUUID2, boolean mult) {
-		return null;
-	}
-
-	@Override
-	public void clanChatSendOffline(UUID sender, String message) {}
-	
-
-	@Override
-	public void clanMessageSend(UUID id, String text) {}
-	
-
-	@Override
-	public boolean demotePlayer(UUID clanUUID, UUID demoted) {
-		return false;
-	}
-
-	@Override
-	public boolean kickPlayer(UUID clanUUID, UUID kicked) {
-		return false;
-	}
-
-	@Override
-	public boolean changeLeader(UUID clanUUID, UUID newleader) {
-		return false;
-	}
-
-	@Override
-	public boolean leaveClan(UUID player) {
-		return false;
-	}
-
-	@Override
-	public boolean modDesc(ClanData clanData, String newDescription, Player sender) {
-		return false;
-	}
-
-	@Override
-	public boolean modTag(ClanData clanData, String newTag, Player sender) {
-		return false;
-	}
-
-	@Override
-	public boolean toggleGlobalFF(CommandSender player) {
-		return false;
-	}
-
-	@Override
-	public boolean toggleGlobalFF(Player player) {
-		return false;
-	}
-
-	@Override
-	public boolean toggleFF(ClanData clanData) {
-		return false;
-	}
-
-	@Override
-	public boolean isLeader(UUID player) {
-		return false;
-	}
-
-	@Override
-	public boolean isMod(UUID uuid) {
-		return false;
-	}
-
-	@Override
-	public boolean deleteHome(UUID clanUUID, String homeName) {
-		return false;
-	}
-
-	@Override
-	public boolean setHome(UUID player, Location location, String name) {
-		return false;
-	}
-
-	@Override
-	public boolean hasHome(UUID player, String homeName) {
-		return false;
-	}
-
-	@Override
-	public Location getHome(UUID player, String homeName) {
-		return null;
-	}
-
-	@Override
-	public HomesData getHomeData(UUID player, String homeName) {
-		return null;
-	}
-
-	@Override
-	public boolean deleteClan(UUID clanUUID) {
-		return false;
-	}
-
-	@Override
-	public boolean deletePlayerClan(UUID player) {
-		return false;
-	}
-
-	@Override
-	public ClanData createNewClan(Player player, String tag, String desc) {
-		return null;
-	}
-
-	@Override
-	public boolean clanExists(UUID clanUUID) {
-		return false;
-	}
-
-	@Override
-	public ClanData getClan(UUID clanUUID) {
-		return null;
-	}
-
-	@Override
-	public HashMap<UUID, Float> getTopClans(PlaceholderTop checktype) {
-		return null;
-	}
-
-	@Override
-	public boolean resetClanKDR(ClanData clanKDR, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean addExtraChest(UUID clanUUID, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean addSlot(String tag, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean removeSlot(String tag, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean setSlot(String tag, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean addPoint(UUID clanid, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean removePoint(String tag, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public boolean setPoint(String tag, int amount, CommandSender sender) {
-		return false;
-	}
-
-	@Override
-	public int getPointsNextLevel(ClanData clanData) {
-		return 0;
-	}
-
-	@Override
-	public void checkClanLevelUp(ClanData clanData, CommandSender player) {}
-
-	@Override
-	public int slotsCount(ClanData clanData) {
-		return 0;
-	}
-
-	@Override
-	public int allyRivalCount(ClanData clanData, RivalAllyCount type) {
-		return 0;
-	}
-
-	@Override
-	public boolean hasClanModerationOnline(UUID clanUUID) {
-		return false;
-	}
-
-	@Override
-	public String parseText(UUID player, String text) {
-		return null;
-	}
-
-	@Override
-	public boolean hasAddonEnabled(String addonName) {
-		return false;
-	}
-
-	@Override
-	public HashMap<UUID, ClanData> getClanData() {
-		return null;
-	}
-
-	@Override
-	public List<Player> getChatspy() {
-		return null;
-	}
-
-	@Override
-	public boolean isGlobalFF() {
-		return false;
-	}
-
-	@Override
-	public List<ClanData> getRivalries(UUID clanUUID) {
-		return null;
-	}
-
-	@Override
-	public List<ClanData> getAlliances(UUID clanUUID) {
-		return null;
 	}
 
 	@Override
@@ -312,7 +55,229 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
+	public void updateClanData(ClanData clan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void unRegisterCommand(String command) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertCommand(String command, String permission, String alias, int cooldown, CommandData_show data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean tagExists(String tag) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isRival(UUID player1, UUID player2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isAlly(UUID player1, UUID player2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean promotePlayer(UUID clanUUID, UUID promoted) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean demotePlayer(UUID clanUUID, UUID demoted) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean kickPlayer(UUID clanUUID, UUID kicked) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean changeLeader(UUID clanUUID, UUID newleader) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean leaveClan(UUID player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean leaveClan(Player player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean modDesc(ClanData clanData, String newDescription, Player sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean modTag(ClanData clanData, String newTag, Player sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean toggleGlobalFF(CommandSender player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean toggleGlobalFF(Player player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean toggleFF(ClanData clanData) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isLeader(UUID player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isMod(UUID uuid) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteHome(UUID clanUUID, String homeName) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean setHome(UUID player, Location location, String name) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean hasHome(UUID player, String homeName) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Location getHome(UUID player, String homeName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HomesData getHomeData(UUID player, String homeName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteClan(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deletePlayerClan(UUID player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ClanData createNewClan(Player player, String tag, String desc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean clanExists(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ClanData getClan(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HashMap<UUID, Float> getTopClans(PlaceholderTop checktype) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean resetClanKDR(ClanData clanKDR, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean addExtraChest(UUID clanUUID, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean addSlot(String tag, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeSlot(String tag, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean setSlot(String tag, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean addPoint(UUID clanid, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
 	public boolean addPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removePoint(String tag, int amount, CommandSender sender) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -324,9 +289,81 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
+	public boolean setPoint(String tag, int amount, CommandSender sender) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
 	public boolean setPoint(String tag, int amount, CommandSender sender, StringBuilder reason) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int getPointsNextLevel(ClanData clanData) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void checkClanLevelUp(ClanData clanData, CommandSender player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int slotsCount(ClanData clanData) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int allyRivalCount(ClanData clanData, RivalAllyCount type) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean hasClanModerationOnline(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String parseText(UUID player, String text) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hasAddonEnabled(String addonName) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public HashMap<UUID, ClanData> getClanData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Player> getChatspy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isGlobalFF() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getProxieds() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -336,9 +373,57 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
+	public RivalRemoveReturn rivalRemoveSend(UUID clanUUID1, UUID clanUUID2, boolean mult) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void clanChatSendOffline(UUID sender, String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clanMessageSend(UUID id, String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public UUID getClanByTag(String tag) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void check_actions(ClanActions action, UUID clanid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ClanData> getRivalries(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ClanData> getAlliances(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public AllyInviteReturn allySend(UUID clanUUID1, UUID clanUUID2, boolean mult) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void registerCommand(String alias, ClansCommand command) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -352,6 +437,14 @@ public class ClanAPIManager implements ClanAPI {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public double getClanKDR(UUID clanUUID) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 
 
 	
