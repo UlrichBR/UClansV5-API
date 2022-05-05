@@ -29,6 +29,8 @@ public interface PlayerAPI {
 
 	String getPlayerRole(UUID playerUUID);
 
+	MemberRoles getEnumPlayerRole(UUID playerUUID);
+
 	boolean isLockedChat(Player player);
 
 	boolean toggleChat(Player player);
@@ -53,7 +55,10 @@ public interface PlayerAPI {
 
 	HashMap<UUID, Invites> getInvited();
 
-	MemberRoles getEnumPlayerRole(UUID playerUUID);
+	void loadAllPlayerData();
+
+	double getPlayerKDR(UUID playerUUID);
+
 
 	
 
