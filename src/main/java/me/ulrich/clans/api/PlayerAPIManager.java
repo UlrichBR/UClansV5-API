@@ -20,104 +20,144 @@ public class PlayerAPIManager implements PlayerAPI {
 	public PlayerAPIManager(Clans clans) {
 		this.plugin = clans;
 	}
-	
 
 	@Override
-	public HashMap<UUID, Invites> getInvited() {
+	public UUID getClanID(UUID uuid) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
-	public UUID getClanID(UUID playerUUID) {
-		return null;
-	}
-	
-	@Override 
 	public boolean isSameClan(UUID player1, UUID player2) {
+		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	@Override
 	public boolean canPVP(UUID player1, UUID player2) {
+		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	@Override
-	public boolean hasPlayerData(UUID playerUUID) {
+	public boolean hasPlayerData(UUID uuid) {
+		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	@Override
 	public boolean hasPlayerData(Player player) {
+		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 	@Override
 	public PlayerData getPlayerData(UUID playerUUID) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public PlayerData getPlayerData(String player) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public String getPlayerRole(UUID playerUUID) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	@Override
-	public boolean isLockedChat(Player player) {
-		return false;
-	}
-	
-	@Override
-	public boolean toggleChat(Player player) {
-		return false;
-	}
-	
-	@Override
-	public boolean isInClan(UUID clanUUID, UUID playerUUID) {
-		return false;
-	}
-	
-	@Override
-	public void updatePlayerSkinCache(UUID playerUUID) {}
-	
-	@Override 
-	public void updatePlayerSkinCache(Player player) {}
-	
-	@Override
-	public InviteResponse inviteToClan(UUID clanUUID, UUID invitedUUID) {
-		return null;
-	}
-	
-	@Override
-	public boolean hasClan(UUID playerUUID) {
-		return false;
-	}
-	
-	@Override
-	public ClanData getPlayerClan(UUID playerUUID) {
-		return null;
-	}
-	
-	@Override
-	public boolean resetPlayerKdr(UUID playerUUID) {
-		return false;
-	}
-	
-	@Override
-	public synchronized void loadPlayerData(UUID playerUUID) {}
-	
-	@Override
-	public synchronized void savePlayerData(PlayerData player) {}
-
 
 	@Override
 	public MemberRoles getEnumPlayerRole(UUID playerUUID) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public boolean isLockedChat(Player player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean toggleChat(Player player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isInClan(UUID clanUUID, UUID playerUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void updatePlayerSkinCache(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updatePlayerSkinCache(Player player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public InviteResponse inviteToClan(UUID clanUUID, UUID invitedUUID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hasClan(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ClanData getPlayerClan(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean resetPlayerKdr(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void loadPlayerData(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void savePlayerData(PlayerData player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public HashMap<UUID, Invites> getInvited() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void loadAllPlayerData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getPlayerKDR(UUID playerUUID) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
+
 }
