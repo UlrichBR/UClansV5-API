@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.Location;
 import org.bukkit.command.SimpleCommandMap;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
@@ -45,6 +46,14 @@ public interface LibAPI {
 	int getNbtInteger(ItemStack currentItem, String name);
 
 	SimpleCommandMap getSimpleCommandMap(Clans plugin);
+	
+	void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut);
+
+	void sendSubTitle(Player p, String msg, int fadeIn, int stay, int fadeOut);
+
+	void sendTitleSubTitle(Player p, String msg, String msg2, int fadeIn, int stay, int fadeOut);
+
+	void sendActionBar(Player p, String message);
 
 	
 
