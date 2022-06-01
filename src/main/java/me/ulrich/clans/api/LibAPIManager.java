@@ -23,6 +23,11 @@ public class LibAPIManager implements LibAPI {
 	}
 	
 	@Override
+	public String getPluginTag() {
+		return null;
+	}
+	
+	@Override
 	public void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {
 		
 	}
