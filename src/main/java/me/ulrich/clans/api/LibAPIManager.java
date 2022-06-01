@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.Location;
 import org.bukkit.command.SimpleCommandMap;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
@@ -19,6 +20,26 @@ public class LibAPIManager implements LibAPI {
 
 	public LibAPIManager(Clans clans) {
 		this.plugin = clans;
+	}
+	
+	@Override
+	public void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {
+		
+	}
+	
+	@Override
+	public void sendSubTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {
+		
+	}
+	
+	@Override
+	public void sendTitleSubTitle(Player p, String msg, String msg2, int fadeIn, int stay, int fadeOut) {
+		
+	}
+	
+	@Override
+	public void sendActionBar(Player p, String message) {
+		
 	}
 	
 	@Override
