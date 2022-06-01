@@ -55,7 +55,7 @@ public interface LibAPI {
 
 	void sendActionBar(Player p, String message);
 
-	
+	String getPluginTag();
 
 	
 
