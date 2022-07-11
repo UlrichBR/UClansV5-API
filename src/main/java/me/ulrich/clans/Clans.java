@@ -13,6 +13,7 @@ import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.interfaces.UClans;
+import me.ulrich.clans.manager.HologramManager;
 
 public final class Clans extends JavaPlugin implements UClans{
 
@@ -27,7 +28,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final BossBarAPIManager BossBarAPI;
 	private final LibAPIManager libAPI;
 	private final AddonAPIManager AddonAPI;
-	
+	private HologramManager hologramManager;
+
 	public Clans() {
 		this.ClanAPI = new ClanAPIManager(this);
 		this.PlayerAPI = new PlayerAPIManager(this);
@@ -85,6 +87,10 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	public boolean isMultiServer() {
 		return multiServer;
+	}
+
+	public HologramManager getHologramManager() {
+		return hologramManager;
 	}
 
 
