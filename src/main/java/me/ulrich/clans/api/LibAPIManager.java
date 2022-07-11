@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
+import me.ulrich.clans.interfaces.Hologram;
 import me.ulrich.clans.interfaces.LibAPI;
 import me.ulrich.clans.manager.SignManager;
 import me.ulrich.npc.EntityData;
@@ -116,6 +117,16 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public SimpleCommandMap getSimpleCommandMap(Clans plugin) {
 		return null;
+	}
+	
+	@Override
+	public boolean isHoloEnabled() {
+		return this.plugin.getHologramManager().isHoloEnabled();
+	}
+
+	@Override
+	public Hologram createHolo(Location location, String id, Object extra) {
+		return this.plugin.getHologramManager().createHolo(location, id, extra);
 	}
 	
 	public Clans getPlugin() {
