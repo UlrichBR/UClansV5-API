@@ -57,6 +57,8 @@ public interface LibAPI {
 
 	String getPluginTag();
 
+	boolean isHoloEnabled();
 	
+	Hologram createHolo(final Location location, String id, Object extra);
 
 }
