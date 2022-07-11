@@ -1,75 +1,110 @@
 package me.ulrich.clans.interfaces;
 
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
-import me.ulrich.clans.data.HologramObject;
+import me.ulrich.clans.library.holo.lines.Line;
+import me.ulrich.clans.library.holo.lines.types.ItemLine;
+import me.ulrich.clans.library.holo.lines.types.TextLine;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 /**
- * Handles NMS specific code for rendering "Holograms"
+ * The interface which handles {@link Hologram} connections
  */
 public interface Hologram {
 
-    HologramObject addHologram(HologramObject hologram);
-
-    HologramObject removeHologram(HologramObject hologram);
-
-    void removeHologram(HologramObject hologramObject, Location location, int lines);
-
-    void removeHologram(Location location, int lines);
-
-    void updateVisible(HologramObject hologramObject, Location location, Player player, boolean visible);
-
-    HologramObject getHologram(Location location);
-
-    HologramObject getHologram(String name);
-
-    List<HologramObject> getHolograms();
+    /**
+     * Get the {@link Collection} of {@link Line}s that the {@link Hologram} has displayed
+     * @return The {@link Collection} of {@link Hologram} {@link Line}s
+     */
+    Collection<Line> getLines();
 
     /**
-     * Spawns multiple holograms at the specified location.
-     *
-     * @param location  The location to spawn the holograms at.
-     * @param holograms A list of Strings for the holograms.
+     * Get a {@link Line} at an index
+     * @param index The index to use to fetch the line
+     * @return The {@link Line}
      */
-    @Deprecated
-    void spawnHolograms(Location location, List<String> holograms);
+    Line getLineAt(final int index);
 
     /**
-     * Spawns a hologram at the specified location.
-     *
-     * @param location The location to spawn the hologram at.
-     * @param line     The text the hologram is to display.
+     * Get the index of a {@link Line}
+     * @param line The {@link Line} to find the index for
+     * @return The {@link Line} index
      */
-    @Deprecated
-    void spawnHologram(Location location, String line);
+    int getLineIndex(final Line line);
 
     /**
-     * Removes/Despawns any holograms at the specified location.
-     *
-     * @param location The location to despawn holograms from.
+     * Set a {@link Line} at an index
+     * @param index The index to set
+     * @param line The {@link Line} to set at that index
      */
-    @Deprecated
-    void despawnHologram(Location location);
+    void setLineAt(final int index, final Line line);
 
     /**
-     * Adds the specified location to the hologram list.
-     *
-     * @param location The location to add.
+     * Update a {@link Line} at an index
+     * @param index The index to update
+     * @param line The {@link Line} to change it to
      */
-    @Deprecated
-    void addHologram(Location location);
+    void updateLine(final int index, final Line line);
 
     /**
-     * Gets a list of locations where holograms are present.
-     *
-     * @return A list of locations where holograms are present.
+     * Append a {@link Line} to the {@link Hologram}
+     * @param line The {@link Line} to append
      */
-    @Deprecated
-    ArrayList<Location> getLocations();
+    void appendLine(final Line line);
+
+    /**
+     * Append an {@link ItemLine} to the {@link Hologram} with an {@link ItemStack} display
+     * @param itemStack The {@link ItemStack} to display
+     * @return The {@link ItemLine} created
+     */
+    ItemLine appendItemLine(final ItemStack itemStack);
+
+    /**
+     * Append a {@link TextLine} to the {@link Hologram} with a {@link String} display
+     * @param text The {@link String} to display
+     * @return The {@link TextLine} created
+     */
+    TextLine appendTextLine(final String text);
+
+    /**
+     * Get the {@link VisibilityManager} for the {@link Hologram}
+     * @return The {@link VisibilityManager}
+     */
+    VisibilityManager getVisibilityManager();
+
+    /**
+     * Get the {@link Hologram}s current {@link Location}
+     * @return The {@link Location}
+     */
+    Location getLocation();
+
+    /**
+     * Teleport the {@link Hologram} to a different location
+     * @param location The new {@link Hologram} {@link Location}
+     */
+    void teleport(final Location location);
+
+    /**
+     * Delete the {@link Hologram}, and all attached entities
+     */
+    void delete();
+
+    /**
+     * Get the size of all the attached {@link Line}s
+     * @return The size of the {@link Hologram} {@link Line}s
+     */
+    int size();
+
+    /**
+     * Get the {@link Hologram} as a {@link Object} from the {@link HologramAPI} source
+     * @return The {@link Object}
+     */
+    Object getHologramAsObject();
+    
+    String getId();
+    
+    Object getExtra();
 
 }
-
