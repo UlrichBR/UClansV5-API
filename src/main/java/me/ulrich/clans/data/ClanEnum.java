@@ -33,7 +33,7 @@ public class ClanEnum {
 	}
 	
 	public enum ClanStorage{
-		MYSQL, SQLITE, YAML;
+		MYSQL, SQLITE, YAML, H2;
 	}
 	
 	public enum MsgUsage{
@@ -89,7 +89,7 @@ public class ClanEnum {
 	}
 	
 	public enum SettingsType{
-		WARINVITE, ALLYSHAREDCHAT, JOINLEAVE, ALLYSHAREDHOME, CLANFF, MEMBERMANAGERHOMES, MEMBERMANAGERWARS;
+		WARINVITE, ALLYSHAREDCHAT, JOINLEAVE, ALLYSHAREDHOME, CLANFF, MEMBERMANAGERHOMES, MEMBERMANAGERWARS, OPENED;
 	}
 	
 	public enum SettingsFlagsAccept {
@@ -147,5 +147,9 @@ public class ClanEnum {
 	public enum QuestWarn {
 		EXPIRED, FINISHED, EARNED,
 		;
+	}
+	
+	public enum HoloPreference{
+		ANY, CMI, HOLOGRAPHICDISPLAYS, HOLOGRAMS, DECENTHOLOGRAMS;
 	}
 }
