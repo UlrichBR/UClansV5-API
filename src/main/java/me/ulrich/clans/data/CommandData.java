@@ -9,11 +9,13 @@ public class CommandData {
 	private CommandData_show show;
 	private CommandData_title title;
 	private CommandData_actionbar actionbar;
+	private double value;
 
-	public CommandData(String id, String permission, String alias, int cooldown, CommandData_show show, CommandData_title title, CommandData_actionbar actionbar) {
+	public CommandData(String id, String permission, String alias, double value, int cooldown, CommandData_show show, CommandData_title title, CommandData_actionbar actionbar) {
 		this.setId(id);
 		this.setPermission(permission);
 		this.setAlias(alias);
+		this.setValue(value);
 		this.setCooldown(cooldown);
 		this.setShow(show);
 		this.setTitle(title);
@@ -74,5 +76,13 @@ public class CommandData {
 
 	public void setActionbar(CommandData_actionbar actionbar) {
 		this.actionbar = actionbar;
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
 	}
 }
