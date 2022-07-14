@@ -33,7 +33,7 @@ public interface ClanAPI {
 
 	void unRegisterCommand(String command);
 
-	void insertCommand(String command, String permission, String alias, int cooldown, CommandData_show data);
+	void insertCommand(String command, String permission, String alias, double value, int cooldown, CommandData_show data);
 
 	boolean tagExists(String tag);
 
