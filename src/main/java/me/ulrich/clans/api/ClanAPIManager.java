@@ -67,7 +67,7 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
-	public void insertCommand(String command, String permission, String alias, int cooldown, CommandData_show data) {
+	public void insertCommand(String command, String permission, String alias, double value, int cooldown, CommandData_show data) {
 		// TODO Auto-generated method stub
 		
 	}
