@@ -17,14 +17,16 @@ public class ClanHomeCreateEvent extends Event implements Cancellable {
 	private final String homeName;
 	private final Location location;
 	private final String message;
+	private final UUID sender;
 
-    public ClanHomeCreateEvent(UUID clanID, String clanTag, String homeName, Location location, String message) {
+    public ClanHomeCreateEvent(UUID sender, UUID clanID, String clanTag, String homeName, Location location, String message) {
 
     	this.clanID = clanID;
     	this.clanTag = clanTag;
     	this.homeName = homeName;
     	this.location = location;
     	this.message = message;
+    	this.sender = sender;
 
     }
     
@@ -63,6 +65,10 @@ public class ClanHomeCreateEvent extends Event implements Cancellable {
 
 	public String getMessage() {
 		return message;
+	}
+
+	public UUID getSender() {
+		return sender;
 	}
 
 
